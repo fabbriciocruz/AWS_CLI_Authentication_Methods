@@ -9,7 +9,7 @@
 <bl >
 
 
-1. Edit the .aws/config and add the following (Replace the values between < > as you need)
+1. Edit the .aws/config and add the following (Replace the values between <> as you need)
 
     ```sh
     [profile <MY_PROFILE_NAME>]
@@ -21,7 +21,7 @@
     output = json
     ```
 
-2. After you configure a named profile automatically or manually, you can invoke it to request temporary credentials from AWS. Before you can run an AWS CLI service command, you must retrieve and cache a set of temporary credentials. To get these temporary credentials, run the following command and replace the value between <>
+2. After you configure a named profile, you can invoke it to request temporary credentials from AWS. Before you can run an AWS CLI service command, you must retrieve and cache a set of temporary credentials. To get these temporary credentials, run the following command and replace the value between <>
 
     ```sh
     aws sso login --profile <MY_PROFILE_NAME>
