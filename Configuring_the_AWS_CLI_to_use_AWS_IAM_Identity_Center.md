@@ -3,7 +3,7 @@
 ### Prerequisites
 * The account which will be accessed must be available in the AWS SSO portal
 
-![image](https://github.com/fabbriciocruz/AWS_CLI_Authentication_Methods/blob/c5f47cca6a3d931a6bb82ba36d296fc0083b3b9c/Images/AwsSSOPortal.png)
+![image](https://github.com/fabbriciocruz/AWS_CLI_Authentication_Methods/blob/6aaac5b21d36275e783ea8912f41553dc4876362/Images/AwsSSOPortal.png)
 
 ### Configuring a named profile to use IAM Identity Center
 
