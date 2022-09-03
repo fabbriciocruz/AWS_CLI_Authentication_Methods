@@ -8,8 +8,12 @@ This how-to applies either when you need to access the AWS CodeCommit
 
 ![image](https://github.com/fabbriciocruz/AWS_CLI_Authentication_Methods/blob/c5f47cca6a3d931a6bb82ba36d296fc0083b3b9c/Images/AwsSSOPortal.png)
 
+
+<bl >
+
+
 1. Edit the .aws/config and add the following (Replace the values between < > as you need)
-    
+
     ```sh
     [profile <MY_PROFILE_NAME>]
     sso_start_url = <AWS_SSO_PORTAL_URL>
