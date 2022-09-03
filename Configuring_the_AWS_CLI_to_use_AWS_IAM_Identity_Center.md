@@ -1,8 +1,7 @@
 # Configuring the AWS CLI to use AWS IAM Identity Center
 
 ### Prerequisites
-* The account which will be accessed must have be available in the AWS SSO portal
-<Paste sso portal screenshot>
+* The account which will be accessed must be available in the AWS SSO portal
 
 ![image](https://github.com/fabbriciocruz/AWS_CLI_Authentication_Methods/blob/c5f47cca6a3d931a6bb82ba36d296fc0083b3b9c/Images/AwsSSOPortal.png)
 
