@@ -52,20 +52,20 @@ https://<XXXX>.awsapps.com/start#/
 
 2. Choose “AWS Account” to expand the list of AWS accounts
 
-![image](expand sso accounts)
+![image](https://github.com/fabbriciocruz/AWS_CLI_Authentication_Methods/blob/2bddf35c2ca3120b9209ea5c5e8d8f48b53e3500/Images/expand_aws_accounts.png)
 
 3. Choose the AWS account that you want to access using the AWS CLI. This expands the list of permission sets in the account. Then choose "Command line or programatic access"
 
-![image](expand_permission_sets)
+![image](https://github.com/fabbriciocruz/AWS_CLI_Authentication_Methods/blob/2bddf35c2ca3120b9209ea5c5e8d8f48b53e3500/Images/expand_permission_sets.png)
 
 4. Move your mouse over the option you want to copy credentials <br >
 Copy the varibles and paste it on your terminal
 
-![image](move_mouse_over)
+![image](https://github.com/fabbriciocruz/AWS_CLI_Authentication_Methods/blob/2bddf35c2ca3120b9209ea5c5e8d8f48b53e3500/Images/move_mouse_over.png)
 
 5. Optionally, you can verify that the credentials are set up correctly by running the “aws configure list” command.
 
-![image](aws_configure_list)
+![image](https://github.com/fabbriciocruz/AWS_CLI_Authentication_Methods/blob/2bddf35c2ca3120b9209ea5c5e8d8f48b53e3500/Images/aws_configure_list.png)
 
 6. Run the following command and replace the values between <>
 
