@@ -78,3 +78,6 @@ Copy the varibles and paste it on your terminal
 * [Configuring the AWS CLI to use AWS IAM Identity Center (successor to AWS Single Sign-On)](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-sso.html)
 
 
+* [Federated multi-account access for AWS CodeCommit
+](https://aws.amazon.com/blogs/devops/federated-multi-account-access-for-aws-codecommit/)
+
