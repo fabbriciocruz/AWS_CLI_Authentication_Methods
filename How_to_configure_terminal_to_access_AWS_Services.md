@@ -1,4 +1,4 @@
-# Configuring the AWS CLI to use AWS IAM Identity Center
+# Configuring the AWS CLI to use AWS IAM Identity Center   
 
 This how-to applies either when you need to access the AWS CodeCommit
 
