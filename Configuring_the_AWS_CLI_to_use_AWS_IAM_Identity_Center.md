@@ -1,7 +1,5 @@
 # Configuring the AWS CLI to use AWS IAM Identity Center
 
-This how-to applies either when you need to access the AWS CodeCommit
-
 ### Prerequisites
 * The account which will be accessed must have be available in the AWS SSO portal
 <Paste sso portal screenshot>
@@ -34,6 +32,13 @@ This how-to applies either when you need to access the AWS CodeCommit
 
     ```sh
     aws sts get-caller-identity --profile <MY_PROFILE_NAME>
+    ```
+
+## Tips
+* To access Aws CodeCommit you just need to run this how-to and then clone your CodeCommit repository running the following command:
+
+    ```sh
+    git clone codecommit::<YOUR REPOSITORY REGION>://<YOUR REPOSITORY NAME>
     ```
 
 ### References
