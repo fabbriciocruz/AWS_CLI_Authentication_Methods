@@ -1,4 +1,4 @@
-# Configuring the AWS CLI to use AWS IAM Identity Center   
+# Configuring the AWS CLI to use AWS IAM Identity Center
 
 This how-to applies either when you need to access the AWS CodeCommit
 
@@ -6,7 +6,7 @@ This how-to applies either when you need to access the AWS CodeCommit
 * The account which will be accessed must have be available in the AWS SSO portal
 <Paste sso portal screenshot>
 
-![image](https://github.com/fabbriciocruz/kubernetes/blob/eadd8dd0d290365e149fdb238904002ee902e190/Amazon_EKS/Documentation_Images/Rancher_Hosted_Kubernetes_Version.png)
+![image](https://github.com/fabbriciocruz/AWS_CLI_Authentication_Methods/blob/c5f47cca6a3d931a6bb82ba36d296fc0083b3b9c/Images/AwsSSOPortal.png)
 
 1. Edit the .aws/config and add the following (Replace the values between < > as you need)
     
