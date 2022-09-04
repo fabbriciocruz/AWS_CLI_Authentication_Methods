@@ -2,8 +2,9 @@
 
 ### Retrieving short-term credentials for CLI use with AWS IAM Identity Center + Assume Role
 
-1. Go to the AWS IAM Identity Center portal (Replace <XXXX> by the URL of your organization)
-https://<XXXX>.awsapps.com/start#/
+
+1. Go to the AWS IAM Identity Center portal (Replace XXXX by the URL of your organization)
+https://XXXX.awsapps.com/start#/
 
 2. Choose “AWS Account” to expand the list of AWS accounts
 
@@ -25,5 +26,9 @@ Copy the varibles and paste it on your terminal
 6. Run the following command and replace the values between <>
 
     ```sh
-    eval $(aws sts assume-role --role-arn arn:aws:iam::<ACCOUNT_ID>:role/<IAM_ROLE_NAME> --role-session-name <SESSTION_NAME> | jq -r '.Credentials | "export AWS_ACCESS_KEY_ID=\(.AccessKeyId)\nexport AWS_SECRET_ACCESS_KEY=\(.SecretAccessKey)\nexport AWS_SESSION_TOKEN=\(.SessionToken)\n"')
+    eval $(aws sts assume-role \
+    --role-arn arn:aws:iam::<ACCOUNT_ID>:role/<IAM_ROLE_NAME> \
+    --role-session-name <SESSTION_NAME> \
+    | jq -r '.Credentials \
+    | "export AWS_ACCESS_KEY_ID=\(.AccessKeyId)\nexport AWS_SECRET_ACCESS_KEY=\(.SecretAccessKey)\nexport AWS_SESSION_TOKEN=\(.SessionToken)\n"')
     ```

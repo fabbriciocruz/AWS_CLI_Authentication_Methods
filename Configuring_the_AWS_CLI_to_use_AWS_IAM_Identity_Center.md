@@ -1,7 +1,7 @@
 # Configuring a named profile to use IAM Identity Center
 
 ### Prerequisites
-* The account which will be accessed must be available in the AWS SSO portal
+* The account which will be accessed must be available on the AWS IAM Identity Center portal
 
 ![image](https://github.com/fabbriciocruz/AWS_CLI_Authentication_Methods/blob/6aaac5b21d36275e783ea8912f41553dc4876362/Images/AwsSSOPortal.png)
 
@@ -26,7 +26,7 @@
 3. Run the following command to check if you've done everything all right
 
     ```sh
-    aws sts get-caller-identity --profile <MY_PROFILE_NAME>
+    aws sts get-caller-identity --profile <MY_AWSCLI_PROFILE_NAME>
     ```
 
     * When the credential expires you'll need to run the aws sso login command again
