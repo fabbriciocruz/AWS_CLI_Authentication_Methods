@@ -53,7 +53,7 @@ https://XXXX.awsapps.com/start#/
 
 ![image](https://github.com/fabbriciocruz/AWS_CLI_Authentication_Methods/blob/2bddf35c2ca3120b9209ea5c5e8d8f48b53e3500/Images/expand_permission_sets.png)
 
-4. Move your mouse over the option you want to copy credentials
+4. Move your mouse over the Option 2
 
 ![image](https://github.com/fabbriciocruz/AWS_CLI_Authentication_Methods/blob/6d3d72bec8a5a137f9061ada5c7c6e643ae37251/Images/move_mouse_over_option2.png)
 
@@ -70,8 +70,8 @@ https://XXXX.awsapps.com/start#/
 
     ```sh
     [profile MY_AWS_CLI_PROFILE_NAME]
-    role_arn = arn:aws:iam::134101592639:role/embratel.restrito.mgmt
-    source_profile = 601156111743_embratel.restrito.mgmt
+    role_arn = arn:aws:iam::ACCOUNT_ID:role/IAM_ROLE_NAME
+    source_profile = Account_PermissionSet_Copied_fromd_SSO_Portal
     ```
 Replace the following values above as you need: <br >
 MY_AWS_CLI_PROFILE_NAME: The Aws Cli profile name <br >
