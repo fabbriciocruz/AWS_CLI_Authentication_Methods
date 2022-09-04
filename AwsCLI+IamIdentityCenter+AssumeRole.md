@@ -35,13 +35,19 @@ https://XXXX.awsapps.com/start#/
 7. Run the following command replacing the values as indicated below
 
     ```sh
-    eval $(aws sts assume-role --role-arn arn:aws:iam::ACCOUNT_ID:role/IAM_ROLE_NAME --role-session-name SESSTION_NAME | jq -r '.Credentials | "export AWS_ACCESS_KEY_ID=\(.AccessKeyId)\nexport AWS_SECRET_ACCESS_KEY=\(.SecretAccessKey)\nexport AWS_SESSION_TOKEN=\(.SessionToken)\n"')
+    eval $(aws sts assume-role --role-arn arn:aws:iam::ACCOUNT_ID:role/IAM_ROLE_NAME --role-session-name SESSION_NAME | jq -r '.Credentials | "export AWS_ACCESS_KEY_ID=\(.AccessKeyId)\nexport AWS_SECRET_ACCESS_KEY=\(.SecretAccessKey)\nexport AWS_SESSION_TOKEN=\(.SessionToken)\n"')
     ```
 
         Replace the values above as you need:
         ACCOUNT_ID: The AWS account ID which you want to switch role to
         IAM_ROLE_NAME: The IAM role you want to switch role to
-        SESSTION_NAME: Name for this session
+        SESSION_NAME: Name for this session
+
+8. Check if everything is ok running the following command (It'll list the S3 buckets from the account you want to switch role to as long as you have permissions to do it :)
+
+    ```sh
+    aws s3 ls --profile MY_AWS_CLI_PROFILE_NAME
+    ```
 
 ## (Method 02) Configure an AWS CLI named profile
 * Tip: This approach will provide valid credential token as long as the your terminal session is openned. If you close your terminal sesstion and then open a new one you need to run all the following steps again (This appraoch is recommended when you work eventually on some account)
@@ -85,7 +91,7 @@ https://XXXX.awsapps.com/start#/
 
 8. Save and exit the file
 
-9. Check if everything is ok running the following command (It must list the S3 buckets from the account you want to switch role to as long as you have permissions to do it :)
+9. Check if everything is ok running the following command (It'll list the S3 buckets from the account you want to switch role to as long as you have permissions to do it :)
 
     ```sh
     aws s3 ls --profile MY_AWS_CLI_PROFILE_NAME
