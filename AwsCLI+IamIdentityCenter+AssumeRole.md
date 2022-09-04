@@ -46,7 +46,7 @@ https://XXXX.awsapps.com/start#/
 8. Check if everything is ok running the following command (It'll list the S3 buckets from the account you want to switch role to as long as you have permissions to do it :)
 
     ```sh
-    aws s3 ls --profile MY_AWS_CLI_PROFILE_NAME
+    aws s3 ls
     ```
 
 ## (Method 02) Configure an AWS CLI named profile
