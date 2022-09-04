@@ -80,3 +80,10 @@ IAM_ROLE_NAME: The IAM role you want to switch role to <br >
 SOURCE_PROFILE: Account_PermissionSet_Copied_fromd_SSO_Portal
 
 8. Save and exit the file
+
+9. Check if everything is ok running the following command (It must list the S3 buckets from the account you want to switch role to as long as you have permissions to do it :)
+
+    ```sh
+    aws s3 ls --profile MY_AWS_CLI_PROFILE_NAME
+    ```
+    <strong>Tip:</strong> Everytime your credentials expire you'll need to copy new ones from the IAM Identity Center portal and paste it in the ~/.aws/credentials file replacing the old ones
