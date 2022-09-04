@@ -26,7 +26,7 @@ https://XXXX.awsapps.com/start#/
 
 5. Paste it on your terminal and press Enter
 
-![image](paste_on_your_terminal)
+![image](https://github.com/fabbriciocruz/AWS_CLI_Authentication_Methods/blob/6d3d72bec8a5a137f9061ada5c7c6e643ae37251/Images/paste_on_your_terminal.png)
 
 6. Optionally, you can verify that the credentials are set up correctly by running the “aws configure list” command.
 
