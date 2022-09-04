@@ -32,12 +32,16 @@ https://XXXX.awsapps.com/start#/
 
 ![image](https://github.com/fabbriciocruz/AWS_CLI_Authentication_Methods/blob/2bddf35c2ca3120b9209ea5c5e8d8f48b53e3500/Images/aws_configure_list.png)
 
-7. Run the following command and replace the values between <>
+7. Run the following command replacing the values as indicated below
 
     ```sh
-    eval $(aws sts assume-role --role-arn arn:aws:iam::<ACCOUNT_ID>:role/<IAM_ROLE_NAME> --role-session-name <SESSTION_NAME> | jq -r '.Credentials | "export AWS_ACCESS_KEY_ID=\(.AccessKeyId)\nexport AWS_SECRET_ACCESS_KEY=\(.SecretAccessKey)\nexport AWS_SESSION_TOKEN=\(.SessionToken)\n"')
+    eval $(aws sts assume-role --role-arn arn:aws:iam::ACCOUNT_ID:role/IAM_ROLE_NAME --role-session-name SESSTION_NAME | jq -r '.Credentials | "export AWS_ACCESS_KEY_ID=\(.AccessKeyId)\nexport AWS_SECRET_ACCESS_KEY=\(.SecretAccessKey)\nexport AWS_SESSION_TOKEN=\(.SessionToken)\n"')
     ```
 
+        Replace the values above as you need: <br >
+        ACCOUNT_ID: The AWS account ID which you want to switch role to <br >
+        IAM_ROLE_NAME: The IAM role you want to switch role to <br >
+        SESSTION_NAME: Name for this session
 
 ## (Method 02) Configure an AWS CLI named profile
 * Tip: This approach will provide valid credential token as long as the your terminal session is openned. If you close your terminal sesstion and then open a new one you need to run all the following steps again (This appraoch is recommended when you work eventually on some account)
@@ -73,11 +77,11 @@ https://XXXX.awsapps.com/start#/
     role_arn = arn:aws:iam::ACCOUNT_ID:role/IAM_ROLE_NAME
     source_profile = Account_PermissionSet_Copied_fromd_SSO_Portal
     ```
-Replace the following values above as you need: <br >
-MY_AWS_CLI_PROFILE_NAME: The Aws Cli profile name <br >
-ACCOUNT_ID: The AWS account ID which you want to switch role to <br >
-IAM_ROLE_NAME: The IAM role you want to switch role to <br >
-SOURCE_PROFILE: Account_PermissionSet_Copied_fromd_SSO_Portal
+        Replace the values above as you need: <br >
+        MY_AWS_CLI_PROFILE_NAME: The Aws Cli profile name <br >
+        ACCOUNT_ID: The AWS account ID which you want to switch role to <br >
+        IAM_ROLE_NAME: The IAM role you want to switch role to <br >
+        SOURCE_PROFILE: Account_PermissionSet_Copied_fromd_SSO_Portal
 
 8. Save and exit the file
 
