@@ -53,14 +53,14 @@ https://XXXX.awsapps.com/start#/
 
 4. Move your mouse over the option you want to copy credentials
 
-![image](move_mouse_over_option2)
+![image](https://github.com/fabbriciocruz/AWS_CLI_Authentication_Methods/blob/6d3d72bec8a5a137f9061ada5c7c6e643ae37251/Images/move_mouse_over_option2.png)
 
 5. In your terminal open the file ~/.aws/credentials and paste the information you've copied <br >
 <strong>Tip:</strong> If you don't have the ~/.aws/ directory you must first run the "aws configure" command and just press Enter for all options
 
-![image](vi_aws_credentials)
+![image](https://github.com/fabbriciocruz/AWS_CLI_Authentication_Methods/blob/6d3d72bec8a5a137f9061ada5c7c6e643ae37251/Images/vi_aws_credentials.png)
 
-![image](paste_on_aws_credentials_file)
+![image](https://github.com/fabbriciocruz/AWS_CLI_Authentication_Methods/blob/6d3d72bec8a5a137f9061ada5c7c6e643ae37251/Images/paste_on_aws_credentials_file.png)
 
 6. Save and exit the file
 
