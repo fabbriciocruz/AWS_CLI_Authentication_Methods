@@ -6,7 +6,7 @@
     * Temporary credentials valid only for one terminal session
     * Configure an AWS CLI named profile
 
-## Temporary credentials valid only for one terminal session
+## Temporary credentials valid only for one terminal sessions
 * Tip: This approach will provide valid credential token as long as the your terminal session is openned. If you close your terminal sesstion and then open a new one you need to run all the following steps again (This appraoch is recommended when you eventually do some tasks on one of your organization's account)
 
 1. Go to the AWS IAM Identity Center portal (Replace XXXX by the URL of your organization)
