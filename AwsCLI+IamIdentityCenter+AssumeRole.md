@@ -1,4 +1,4 @@
-# AWS CLI + IAM Identity Center + Assume Rolesss
+# AWS CLI + IAM Identity Center + Assume Role
 
 ### Retrieving short-term credentials for CLI use with AWS IAM Identity Center + Assume Role
 
@@ -6,7 +6,7 @@
     * Temporary credentials valid only for one terminal session
     * Configure an AWS CLI named profile
 
-## Temporary credentials valid only for one terminal session
+## (Method 01) Temporary credentials valid only for one terminal session
 * Tip: This approach will provide valid credential token as long as the your terminal session is openned. If you close your terminal sesstion and then open a new one you need to run all the following steps again (This appraoch is recommended when you eventually do some tasks on one of your organization's account)
 
 1. Go to the AWS IAM Identity Center portal (Replace XXXX by the URL of your organization)
@@ -37,7 +37,9 @@ https://XXXX.awsapps.com/start#/
     ```sh
     eval $(aws sts assume-role --role-arn arn:aws:iam::<ACCOUNT_ID>:role/<IAM_ROLE_NAME> --role-session-name <SESSTION_NAME> | jq -r '.Credentials | "export AWS_ACCESS_KEY_ID=\(.AccessKeyId)\nexport AWS_SECRET_ACCESS_KEY=\(.SecretAccessKey)\nexport AWS_SESSION_TOKEN=\(.SessionToken)\n"')
     ```
-## Configure an AWS CLI named profile
+
+
+## (Method 02) Configure an AWS CLI named profile
 * Tip: This approach will provide valid credential token as long as the your terminal session is openned. If you close your terminal sesstion and then open a new one you need to run all the following steps again (This appraoch is recommended when you work eventually on some account)
 
 1. Go to the AWS IAM Identity Center portal (Replace XXXX by the URL of your organization)
