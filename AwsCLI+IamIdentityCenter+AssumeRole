@@ -1,6 +1,6 @@
 # AWS CLI + IAM Identity Center + Assume Role
 
-### Retrieving short-term credentials for CLI use with AWS IAM Identity Center (Swtich Role)
+### Retrieving short-term credentials for CLI use with AWS IAM Identity Center + Assume Role
 
 1. Go to the AWS IAM Identity Center portal (Replace <XXXX> by the URL of your organization)
 https://<XXXX>.awsapps.com/start#/
