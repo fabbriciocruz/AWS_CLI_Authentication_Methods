@@ -1,15 +1,9 @@
-# Two ways to configure the AWS CLI to use AWS IAM Identity Center
-* Configuring a named profile to use IAM Identity Center
-* Retrieving short-term credentials for CLI use with AWS IAM Identity Center (Swtich Role)
-
-<bl >
+# Configuring a named profile to use IAM Identity Center
 
 ### Prerequisites
 * The account which will be accessed must be available in the AWS SSO portal
 
 ![image](https://github.com/fabbriciocruz/AWS_CLI_Authentication_Methods/blob/6aaac5b21d36275e783ea8912f41553dc4876362/Images/AwsSSOPortal.png)
-
-### Configuring a named profile to use IAM Identity Center
 
 1. Edit the .aws/config and add the following (Replace the values between <> as you need)
 
@@ -44,40 +38,9 @@
         git clone codecommit::<YOUR REPOSITORY REGION>://<MY_AWSCLI_PROFILE_NAME>@<YOUR REPOSITORY NAME>
         ```
 
-
-### Retrieving short-term credentials for CLI use with AWS IAM Identity Center (Swtich Role)
-
-1. Go to the AWS IAM Identity Center portal (Replace <XXXX> by the URL of your organization)
-https://<XXXX>.awsapps.com/start#/
-
-2. Choose “AWS Account” to expand the list of AWS accounts
-
-![image](https://github.com/fabbriciocruz/AWS_CLI_Authentication_Methods/blob/2bddf35c2ca3120b9209ea5c5e8d8f48b53e3500/Images/expand_aws_accounts.png)
-
-3. Choose the AWS account that you want to access using the AWS CLI. This expands the list of permission sets in the account. Then choose "Command line or programatic access"
-
-![image](https://github.com/fabbriciocruz/AWS_CLI_Authentication_Methods/blob/2bddf35c2ca3120b9209ea5c5e8d8f48b53e3500/Images/expand_permission_sets.png)
-
-4. Move your mouse over the option you want to copy credentials <br >
-Copy the varibles and paste it on your terminal
-
-![image](https://github.com/fabbriciocruz/AWS_CLI_Authentication_Methods/blob/2bddf35c2ca3120b9209ea5c5e8d8f48b53e3500/Images/move_mouse_over.png)
-
-5. Optionally, you can verify that the credentials are set up correctly by running the “aws configure list” command.
-
-![image](https://github.com/fabbriciocruz/AWS_CLI_Authentication_Methods/blob/2bddf35c2ca3120b9209ea5c5e8d8f48b53e3500/Images/aws_configure_list.png)
-
-6. Run the following command and replace the values between <>
-
-    ```sh
-    eval $(aws sts assume-role --role-arn arn:aws:iam::<ACCOUNT_ID>:role/<IAM_ROLE_NAME> --role-session-name <SESSTION_NAME> | jq -r '.Credentials | "export AWS_ACCESS_KEY_ID=\(.AccessKeyId)\nexport AWS_SECRET_ACCESS_KEY=\(.SecretAccessKey)\nexport AWS_SESSION_TOKEN=\(.SessionToken)\n"')
-    ```
-
-
 ### References
 * [Configuring the AWS CLI to use AWS IAM Identity Center (successor to AWS Single Sign-On)](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-sso.html)
 
 
 * [Federated multi-account access for AWS CodeCommit
 ](https://aws.amazon.com/blogs/devops/federated-multi-account-access-for-aws-codecommit/)
-
