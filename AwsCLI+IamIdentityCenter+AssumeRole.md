@@ -74,7 +74,7 @@ https://XXXX.awsapps.com/start#/
 5. In your terminal open the file ~/.aws/credentials and paste the information you've copied <br >
 <strong>Tip:</strong> If you don't have the ~/.aws/ directory you must first run the "aws configure" command and just press Enter for all options
 
-![image](https://github.com/fabbriciocruz/AWS_CLI_Authentication_Methods/blob/6d3d72bec8a5a137f9061ada5c7c6e643ae37251/Images/vi_aws_credentials.png)
+![image](https://github.com/fabbriciocruz/AWS_CLI_Authentication_Methods/blob/8279d43fe3a3b6990c0e2f5b0758026a6135deab/Images/vi_aws_credentials.png)
 
 ![image](https://github.com/fabbriciocruz/AWS_CLI_Authentication_Methods/blob/6d3d72bec8a5a137f9061ada5c7c6e643ae37251/Images/paste_on_aws_credentials_file.png)
 
