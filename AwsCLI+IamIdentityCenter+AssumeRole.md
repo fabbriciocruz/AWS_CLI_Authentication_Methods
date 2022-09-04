@@ -38,9 +38,9 @@ https://XXXX.awsapps.com/start#/
     eval $(aws sts assume-role --role-arn arn:aws:iam::ACCOUNT_ID:role/IAM_ROLE_NAME --role-session-name SESSTION_NAME | jq -r '.Credentials | "export AWS_ACCESS_KEY_ID=\(.AccessKeyId)\nexport AWS_SECRET_ACCESS_KEY=\(.SecretAccessKey)\nexport AWS_SESSION_TOKEN=\(.SessionToken)\n"')
     ```
 
-        Replace the values above as you need: <br >
-        ACCOUNT_ID: The AWS account ID which you want to switch role to <br >
-        IAM_ROLE_NAME: The IAM role you want to switch role to <br >
+        Replace the values above as you need:
+        ACCOUNT_ID: The AWS account ID which you want to switch role to
+        IAM_ROLE_NAME: The IAM role you want to switch role to
         SESSTION_NAME: Name for this session
 
 ## (Method 02) Configure an AWS CLI named profile
@@ -77,10 +77,10 @@ https://XXXX.awsapps.com/start#/
     role_arn = arn:aws:iam::ACCOUNT_ID:role/IAM_ROLE_NAME
     source_profile = Account_PermissionSet_Copied_fromd_SSO_Portal
     ```
-        Replace the values above as you need: <br >
-        MY_AWS_CLI_PROFILE_NAME: The Aws Cli profile name <br >
-        ACCOUNT_ID: The AWS account ID which you want to switch role to <br >
-        IAM_ROLE_NAME: The IAM role you want to switch role to <br >
+        Replace the values above as you need:
+        MY_AWS_CLI_PROFILE_NAME: The Aws Cli profile name
+        ACCOUNT_ID: The AWS account ID which you want to switch role to
+        IAM_ROLE_NAME: The IAM role you want to switch role to
         SOURCE_PROFILE: Account_PermissionSet_Copied_fromd_SSO_Portal
 
 8. Save and exit the file
