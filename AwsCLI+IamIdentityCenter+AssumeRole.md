@@ -1,4 +1,4 @@
-# AWS CLI + IAM Identity Center + Assume Role
+# AWS CLI + IAM Identity Center + Assume Roles
 
 ### Retrieving short-term credentials for CLI use with AWS IAM Identity Center + Assume Role
 
