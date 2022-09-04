@@ -54,7 +54,7 @@ https://XXXX.awsapps.com/start#/
 ## (Method 02) Configure an AWS CLI named profile
 This approach will provide a configuration for all of your terminal sessions<br >
 When the token expires you'll need to run the steps from 1 to 6 again<br >
-This appraoch is recommended when you often work on some account(s)
+This appraoch is recommended when you often do some tasks on one or more of your organization's account(s)
 
 1. Go to the AWS IAM Identity Center portal (Replace XXXX by the URL of your organization)
 https://XXXX.awsapps.com/start#/
